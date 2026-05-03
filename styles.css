@@ -1,0 +1,342 @@
+:root {
+    /* Colors inspired by the logo */
+    --bg-primary: #0a0a0c;
+    --bg-secondary: #16161a;
+    --text-primary: #f0f0f0;
+    --text-secondary: #a0a0a5;
+    
+    /* Silver & Gold Accents */
+    --accent-gold: #c5a059;
+    --accent-gold-hover: #e8c06e;
+    --accent-silver: #c0c0c0;
+    
+    /* Gradients */
+    --gold-gradient: linear-gradient(135deg, #c5a059 0%, #e8c06e 50%, #c5a059 100%);
+    --silver-gradient: linear-gradient(135deg, #e0e0e0 0%, #a0a0a0 100%);
+    
+    /* Typography */
+    --font-main: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background Ambient Glows */
+.bg-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(197, 160, 89, 0.1) 0%, rgba(0,0,0,0) 70%);
+    top: -200px;
+    left: -200px;
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.bg-glow-2 {
+    top: auto;
+    bottom: -200px;
+    right: -200px;
+    left: auto;
+    background: radial-gradient(circle, rgba(192, 192, 192, 0.05) 0%, rgba(0,0,0,0) 70%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header & Logo */
+header {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 4rem 0;
+    animation: fadeInDown 1s ease-out;
+}
+
+.logo-container {
+    /* Hiding watermarks using clip-path to crop slightly */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background: #151515; /* Matches logo background */
+    border: 1px solid rgba(197, 160, 89, 0.15);
+    /* Set explicitly to handle square shape nicely */
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Crop 2% from bottom in case there's a small watermark */
+    clip-path: inset(0 0 2% 0);
+    transform: scale(1.02); /* Compensate for inset */
+    transition: transform 0.5s ease;
+}
+
+.brand-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.headline {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.text-gradient {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.sub-headline {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    font-weight: 300;
+    max-width: 600px;
+}
+
+/* Form */
+.signup-form {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+.input-group {
+    display: flex;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    padding: 0.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.input-group:focus-within {
+    border-color: rgba(197, 160, 89, 0.5);
+    box-shadow: 0 0 20px rgba(197, 160, 89, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+input[type="email"] {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    padding: 1rem 1.5rem;
+    color: var(--text-primary);
+    font-size: 1rem;
+    outline: none;
+    font-family: var(--font-main);
+}
+
+input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary {
+    background: var(--gold-gradient);
+    color: #000;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-family: var(--font-main);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(197, 160, 89, 0.3);
+}
+
+.btn-primary i {
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover i {
+    transform: translateX(4px);
+}
+
+.form-message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    min-height: 20px;
+}
+
+.form-message.success {
+    color: #4ade80;
+    opacity: 1;
+}
+
+.form-message.error {
+    color: #f87171;
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    margin-top: auto;
+    animation: fadeIn 1s ease-out 0.6s both;
+}
+
+.launch-date {
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--accent-gold);
+    background: rgba(197, 160, 89, 0.1);
+    border-color: rgba(197, 160, 89, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+        border-radius: 12px;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        gap: 1rem;
+    }
+    
+    .input-group:focus-within {
+        background: transparent;
+        box-shadow: none;
+    }
+    
+    input[type="email"] {
+        width: 100%;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    input[type="email"]:focus {
+        border-color: rgba(197, 160, 89, 0.5);
+    }
+    
+    .btn-primary {
+        width: 100%;
+        justify-content: center;
+        border-radius: 12px;
+    }
+}
