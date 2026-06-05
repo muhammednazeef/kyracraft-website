@@ -4,57 +4,324 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyra Craft | The Future of Freshness</title>
+    <title>KYRA CRAFT | Premium Lunch Boxes. Crafted Better.</title>
     <meta name="description"
-        content="Introducing India’s premium rectangular, microwave-safe stainless steel lunch boxes designed for the modern lifestyle. Launching May 2026.">
+        content="Experience luxury everyday dining. Kyra Craft premium rectangular, microwave-safe stainless steel lunch boxes designed for modern lifestyles. Launching soon on Amazon India.">
     <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Social Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Background Elements for Premium Feel -->
-    <div class="bg-glow"></div>
-    <div class="bg-glow bg-glow-2"></div>
+    <!-- Luxury Background Canvas & Effects -->
+    <canvas id="particle-canvas"></canvas>
+    <div class="bg-glow bg-glow-gold" id="glow-1"></div>
+    <div class="bg-glow bg-glow-silver" id="glow-2"></div>
 
     <main class="container">
-        <header>
-            <div class="logo-container">
-                <!-- Using a relative path so user can place their logo here -->
+        <!-- HEADER -->
+        <header class="header-section">
+            <div class="logo-container" id="brand-logo-frame">
                 <img src="logo.png" alt="Kyra Craft Logo" class="brand-logo" id="logo">
             </div>
         </header>
 
-        <section class="hero">
-            <h1 class="headline">The Future of <span class="text-gradient">Freshness</span> is Coming Soon.</h1>
-            <p class="sub-headline">
-                Introducing India’s premium rectangular, microwave-safe stainless steel lunch boxes designed for the
-                modern lifestyle.
+        <!-- HERO SECTION -->
+        <section class="hero-section scroll-reveal" id="hero">
+            <div class="launch-badge" id="amazon-launch-badge">
+                <span class="badge-icon">🚀</span>
+                <span class="badge-text">LAUNCHING SOON ON AMAZON INDIA</span>
+            </div>
+
+            <h1 class="headline" id="hero-headline">
+                <span class="text-gold-gradient">PREMIUM LUNCH BOXES.</span><br>
+                <span class="text-silver-gradient">CRAFTED BETTER.</span>
+            </h1>
+
+            <p class="sub-headline" id="hero-subheadline">
+                Designed for modern lifestyles with quality, durability, and everyday convenience.
             </p>
 
-            <form class="signup-form" id="notifyForm">
-                <div class="input-group">
-                    <input type="email" id="email" placeholder="Enter your email for early access" required>
-                    <button type="submit" class="btn-primary">
-                        <span>Notify Me</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                </div>
-                <p class="form-message" id="formMessage"></p>
-            </form>
+            <div class="hero-ctas">
+                <button class="btn-gold" id="hero-cta-notify">
+                    <span>Notify Me</span>
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+                <a href="https://www.instagram.com/kyracraft.official?igsh=MWpuMTlobHI2eTdlbg%3D%3D&utm_source=qr"
+                    target="_blank" rel="noopener" class="btn-silver" id="hero-cta-instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Follow on Instagram</span>
+                </a>
+            </div>
+
+            <div class="instagram-handle" id="hero-instagram-handle">
+                <a href="https://www.instagram.com/kyracraft.official?igsh=MWpuMTlobHI2eTdlbg%3D%3D&utm_source=qr"
+                    target="_blank" rel="noopener">@kyracraft.official</a>
+            </div>
         </section>
 
-        <footer>
-            <p class="launch-date">Launching May 2026</p>
-            <div class="social-links">
+        <!-- FEATURES SECTION -->
+        <section class="features-section scroll-reveal" id="features">
+            <h2 class="section-title text-gold-gradient" id="features-title">Why Choose Kyra Craft?</h2>
+
+            <div class="features-grid">
+                <!-- Card 1: 202 Stainless Steel -->
+                <div class="feature-card" id="feature-card-steel">
+                    <div class="feature-icon-wrapper">
+                        <!-- Custom Gold SVG Icon: Shield/Steel Ingot -->
+                        <svg class="feature-svg-icon" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="url(#gold-gradient-icon)"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M9 11l2 2 4-4" stroke="url(#gold-gradient-icon)" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title">202 Stainless Steel</h3>
+                    <p class="feature-card-desc">Food-grade, durable, and rust-resistant.</p>
+                </div>
+
+                <!-- Card 2: BPA Free -->
+                <div class="feature-card" id="feature-card-bpa">
+                    <div class="feature-icon-wrapper">
+                        <!-- Custom Gold SVG Icon: Leaf/Safe -->
+                        <svg class="feature-svg-icon" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2a10 10 0 0110 10c0 5.523-4.477 10-10 10S2 17.523 2 12A10 10 0 0112 2z"
+                                stroke="url(#gold-gradient-icon)" stroke-width="1.5" />
+                            <path d="M7 14c1.5-1.5 3-2.5 5-2.5s3.5 1 5 2.5M12 7v5" stroke="url(#gold-gradient-icon)"
+                                stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title">BPA Free</h3>
+                    <p class="feature-card-desc">Safe materials for everyday use.</p>
+                </div>
+
+                <!-- Card 3: Leak Proof Design -->
+                <div class="feature-card" id="feature-card-leakproof">
+                    <div class="feature-icon-wrapper">
+                        <!-- Custom Gold SVG Icon: Lock/Water Drop -->
+                        <svg class="feature-svg-icon" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" stroke="url(#gold-gradient-icon)"
+                                stroke-width="1.5" stroke-linejoin="round" />
+                            <path d="M12 11v4M10 13h4" stroke="url(#gold-gradient-icon)" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title">Leak Proof Design</h3>
+                    <p class="feature-card-desc">No spills. No mess.</p>
+                </div>
+
+                <!-- Card 4: Durable & Long Lasting -->
+                <div class="feature-card" id="feature-card-durable">
+                    <div class="feature-icon-wrapper">
+                        <!-- Custom Gold SVG Icon: Diamond -->
+                        <svg class="feature-svg-icon" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 3h12l4 6-10 12L2 9z" stroke="url(#gold-gradient-icon)" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11 3L8 9l4 12 4-12-3-6" stroke="url(#gold-gradient-icon)" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title">Durable & Long Lasting</h3>
+                    <p class="feature-card-desc">Built for years of use.</p>
+                </div>
+
+                <!-- Card 5: Easy to Clean -->
+                <div class="feature-card" id="feature-card-clean">
+                    <div class="feature-icon-wrapper">
+                        <!-- Custom Gold SVG Icon: Sparkle/Clean -->
+                        <svg class="feature-svg-icon" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 3v4M12 17v4M3 12h4M17 12h4M5.64 5.64l2.82 2.82M15.54 15.54l2.82 2.82M5.64 18.36l2.82-2.82M15.54 8.46l2.82-2.82"
+                                stroke="url(#gold-gradient-icon)" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title">Easy to Clean</h3>
+                    <p class="feature-card-desc">Designed for convenience.</p>
+                </div>
+
+                <!-- Card 6: Premium Finish -->
+                <div class="feature-card" id="feature-card-finish">
+                    <div class="feature-icon-wrapper">
+                        <!-- Custom Gold SVG Icon: Crown/Star -->
+                        <svg class="feature-svg-icon" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 4l3 12h14l3-12-5 4-5-6-5 6-5-4z" stroke="url(#gold-gradient-icon)"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M5 20h14" stroke="url(#gold-gradient-icon)" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title">Premium Finish</h3>
+                    <p class="feature-card-desc">Modern and elegant design.</p>
+                </div>
+            </div>
+
+            <!-- Global SVG Gradients definition for icons -->
+            <svg width="0" height="0">
+                <defs>
+                    <linearGradient id="gold-gradient-icon" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#FFE082" />
+                        <stop offset="50%" stop-color="#D4AF37" />
+                        <stop offset="100%" stop-color="#8E6B15" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about-section scroll-reveal" id="about">
+            <div class="about-container">
+                <h2 class="section-title text-silver-gradient" id="about-title">About Kyra Craft</h2>
+                <div class="about-content">
+                    <span class="quote-mark">“</span>
+                    <p class="about-text">
+                        Kyra Craft focuses on creating premium everyday essentials designed for quality, durability, and
+                        modern living.
+                    </p>
+                    <span class="about-accent-line"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT PREVIEW (COMING SOON) SECTION -->
+        <section class="preview-section scroll-reveal" id="preview">
+            <h2 class="section-title text-gold-gradient" id="preview-title">Something Premium Is Coming</h2>
+
+            <p class="preview-tagline" id="preview-tagline-text">Teaser reveals of our upcoming collection.</p>
+
+            <div class="teaser-grid">
+                <!-- Teaser 1: Compartments -->
+                <div class="teaser-card" id="teaser-card-compartments">
+                    <div class="teaser-image-container">
+                        <img src="teaser_compartments.png" alt="Stainless Steel Compartments Teaser" class="teaser-img">
+                        <div class="teaser-blur-overlay">
+                            <div class="teaser-info">
+                                <span class="teaser-label">STAINLESS STEEL COMPARTMENTS</span>
+                                <span class="teaser-action">Hover to Reveal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teaser 2: Locking Clips -->
+                <div class="teaser-card" id="teaser-card-clips">
+                    <div class="teaser-image-container">
+                        <img src="teaser_clips.png" alt="Secure Locking Clips Teaser" class="teaser-img">
+                        <div class="teaser-blur-overlay">
+                            <div class="teaser-info">
+                                <span class="teaser-label">SECURE LOCKING CLIPS</span>
+                                <span class="teaser-action">Hover to Reveal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teaser 3: Premium Finish -->
+                <div class="teaser-card" id="teaser-card-finish">
+                    <div class="teaser-image-container">
+                        <img src="teaser_finish.png" alt="Premium Finish Teaser" class="teaser-img">
+                        <div class="teaser-blur-overlay">
+                            <div class="teaser-info">
+                                <span class="teaser-label">PREMIUM MATTE FINISH</span>
+                                <span class="teaser-action">Hover to Reveal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teaser 4: Leak-Proof Design -->
+                <div class="teaser-card" id="teaser-card-seal">
+                    <div class="teaser-image-container">
+                        <img src="teaser_seal.png" alt="Leak-Proof Design Teaser" class="teaser-img">
+                        <div class="teaser-blur-overlay">
+                            <div class="teaser-info">
+                                <span class="teaser-label">LEAK-PROOF SILICONE SEAL</span>
+                                <span class="teaser-action">Hover to Reveal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EMAIL SUBSCRIPTION SECTION -->
+        <section class="subscription-section scroll-reveal" id="subscribe">
+            <div class="subscription-box">
+                <h2 class="subscription-title text-gold-gradient" id="subscribe-title">Be The First To Know</h2>
+                <p class="subscription-desc" id="subscribe-desc">
+                    Join our early access list and receive launch updates, exclusive offers, and product announcements.
+                </p>
+
+                <form class="signup-form" id="notifyForm">
+                    <div class="input-group">
+                        <div class="input-icon-wrapper">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <input type="email" id="email" placeholder="Enter your email" required autocomplete="email">
+                        <button type="submit" class="btn-submit" id="subscribe-submit">
+                            <span>Notify Me</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <p class="form-message" id="formMessage"></p>
+                </form>
+            </div>
+        </section>
+
+        <!-- SOCIAL SECTION -->
+        <section class="social-section scroll-reveal" id="socials">
+            <h2 class="section-title text-silver-gradient" id="socials-title">Follow Our Journey</h2>
+
+            <div class="social-grid">
                 <a href="https://www.instagram.com/kyracraft.official?igsh=MWpuMTlobHI2eTdlbg%3D%3D&utm_source=qr"
-                    aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    target="_blank" rel="noopener" class="social-card" id="social-link-instagram">
+                    <div class="social-icon instagram-color">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <span class="social-name">Instagram</span>
+                    <span class="social-handle">@kyracraft.official</span>
+                </a>
+
+                <a href="https://www.kyracraft.in" target="_blank" rel="noopener" class="social-card"
+                    id="social-link-web">
+                    <div class="social-icon web-color">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <span class="social-name">Official Website</span>
+                    <span class="social-handle">www.kyracraft.in</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer-section">
+            <div class="footer-logo">KYRA CRAFT</div>
+            <div class="footer-tagline">Crafting Premium Everyday Essentials</div>
+            <div class="footer-badge">Launching Soon on Amazon India</div>
+            <div class="footer-divider"></div>
+
+            <div class="footer-info">
+                <span>Instagram: <a
+                        href="https://www.instagram.com/kyracraft.official?igsh=MWpuMTlobHI2eTdlbg%3D%3D&utm_source=qr"
+                        target="_blank" rel="noopener">@kyracraft.official</a></span>
+                <span class="footer-info-divider">|</span>
+                <span>Website: <a href="https://www.kyracraft.in" target="_blank"
+                        rel="noopener">www.kyracraft.in</a></span>
+            </div>
+
+            <div class="footer-copyright">
+                &copy; 2026 Kyra Craft. All Rights Reserved.
             </div>
         </footer>
     </main>
