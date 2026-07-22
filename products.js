@@ -37,8 +37,8 @@ window.kyraProducts = [
     ],
     specifications: {
       "Material": "Food Grade Stainless Steel & BPA-Free Premium Plastic",
-      "Capacity": "Approx. 850ml",
-      "Dimensions": "20.5 cm x 14.5 cm x 6.5 cm",
+      "Capacity": "Approx. 1000ml",
+      "Dimensions": "20.5 cm x 13.5 cm x 5.5 cm",
       "Locking System": "Secure 4-side locking clips",
       "Accessories": "1x Stainless Steel Spoon, 1x Snack Container"
     },
@@ -89,8 +89,8 @@ window.kyraProducts = [
     ],
     specifications: {
       "Material": "Food Grade Stainless Steel & BPA-Free Outer Body",
-      "Capacity": "Approx. 900ml",
-      "Dimensions": "21 cm x 15 cm x 6.5 cm",
+      "Capacity": "Approx. 1000ml",
+      "Dimensions": "20.5 cm x 13.5 cm x 6.5 cm",
       "Locking System": "Secure 4-side locking clips",
       "Accessories": "1x Leakproof Snack Container"
     },
@@ -138,8 +138,8 @@ window.kyraProducts = [
     ],
     specifications: {
       "Material": "Food Grade Stainless Steel & Insulated BPA-Free Outer Body",
-      "Capacity": "Approx. 950ml",
-      "Dimensions": "22 cm x 16 cm x 7 cm",
+      "Capacity": "Approx. 750ml",
+      "Dimensions": "20.5 cm x 15.5 cm x 6.7 cm",
       "Compartments": "2 separate fixed compartments",
       "Locking System": "Secure 4-side locking clips"
     },
