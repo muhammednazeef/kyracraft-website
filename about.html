@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | KYRA CRAFT</title>
+    <meta name="description"
+        content="Read the story of Kyra Craft. Learn about our commitment to crafting premium, functional, and elegant lifestyle essentials for modern living.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Luxury Background Canvas & Effects -->
+    <canvas id="particle-canvas"></canvas>
+    <div class="bg-glow bg-glow-gold" id="glow-1"></div>
+    <div class="bg-glow bg-glow-silver" id="glow-2"></div>
+
+    <!-- STICKY HEADER -->
+    <header class="site-header" id="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo-link">
+                <img src="logo.png" alt="Kyra Craft Logo" class="nav-logo-img">
+                <span class="nav-logo-text">KYRA CRAFT</span>
+            </a>
+            
+            <!-- Desktop Nav Menu -->
+            <ul class="nav-menu nav-menu-desktop">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#collections" class="nav-link">Collections</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button class="mobile-nav-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#collections" class="nav-link">Collections</a></li>
+            <li><a href="about.html" class="nav-link active">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <main class="container">
+        <!-- ABOUT HERO SECTION -->
+        <section class="about-hero-section scroll-reveal header-offset">
+            <h1 class="headline">
+                <span class="text-gold-gradient">THE ART OF</span><br>
+                <span class="text-silver-gradient">EVERYDAY LIVING.</span>
+            </h1>
+            <p class="sub-headline">
+                Thoughtfully designed essentials crafted to elevate and simplify your modern lifestyle.
+            </p>
+        </section>
+
+        <!-- VISION SECTION -->
+        <section class="about-brand-vision scroll-reveal">
+            <div class="about-vision-text">
+                <h2 class="about-vision-title">Our Vision</h2>
+                <p class="about-vision-desc">
+                    At Kyra Craft, we believe the items we interact with every single day should be more than just utilitarian. They should be a source of pleasure, reflecting quality craftsmanship, thoughtful engineering, and timeless aesthetics.
+                </p>
+                <p class="about-vision-desc">
+                    We started our journey with premium lunch boxes, but our vision is far larger. We aim to establish Kyra Craft as a premier lifestyle brand. From elegant hydration vessels to kitchen organizers and home decor, our mission is to create a complete catalog of premium daily essentials that harmonize utility with refined luxury.
+                </p>
+            </div>
+            
+            <div class="about-vision-image-frame">
+                <!-- Fallback gradient box representing premium look -->
+                <div class="image-fallback-container">
+                    <i class="fa-solid fa-wand-magic-sparkles image-fallback-icon"></i>
+                    <h3 class="image-fallback-title">Crafting Premium Essentials</h3>
+                    <p class="image-fallback-subtitle">Kyra Craft Design Studio</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHILOSOPHY / VALUES GRID -->
+        <section class="about-philosophy-grid scroll-reveal">
+            <!-- Card 1: Design -->
+            <div class="philosophy-card">
+                <div class="philosophy-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                <h3 class="philosophy-title">Minimalist Design</h3>
+                <p class="philosophy-desc">We follow a clean, functional design language, emphasizing large whitespace, beautiful shapes, and elegant gold and metallic finishes.</p>
+            </div>
+
+            <!-- Card 2: Quality -->
+            <div class="philosophy-card">
+                <div class="philosophy-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3 class="philosophy-title">Uncompromising Quality</h3>
+                <p class="philosophy-desc">By selecting food-grade stainless steel and strictly BPA-free components, we guarantee that our products are safe and built to last.</p>
+            </div>
+
+            <!-- Card 3: Lifestyle -->
+            <div class="philosophy-card">
+                <div class="philosophy-icon"><i class="fa-solid fa-sliders"></i></div>
+                <h3 class="philosophy-title">Modern Functionality</h3>
+                <p class="philosophy-desc">Every leak-proof clip, silicone seal, and modular compartment is extensively engineered to match the dynamics of modern living.</p>
+            </div>
+        </section>
+
+        <!-- BRAND PROMISE / CTA -->
+        <section class="preview-section scroll-reveal" style="padding-top: 3rem;">
+            <div class="about-content" style="max-width: 800px; margin: 0 auto;">
+                <h2 class="section-title text-gold-gradient" style="margin-bottom: 2rem; font-size: 1.8rem;">Future Categories</h2>
+                <p class="about-text" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2.5rem;">
+                    While only our Lunch Box collections are available today, we are busy designing future lines including insulated Water Bottles, Kitchen Essentials, and Home Decor tools. Subscribe below to stay informed of new releases.
+                </p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; width: 100%; flex-wrap: wrap;">
+                    <a href="index.html#collections" class="btn-gold" style="text-decoration: none;">
+                        <span>Browse Collections</span>
+                    </a>
+                    <a href="contact.html" class="btn-silver" style="text-decoration: none;">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer-section">
+            <div class="footer-logo">KYRA CRAFT</div>
+            <div class="footer-tagline">Crafting Premium Everyday Essentials</div>
+            <div class="footer-divider"></div>
+
+            <div class="footer-info">
+                <span>Instagram: <a
+                        href="https://www.instagram.com/kyracraft.official?utm_source=qr"
+                        target="_blank" rel="noopener">@kyracraft.official</a></span>
+                <span class="footer-info-divider">|</span>
+                <span>Email: <a href="mailto:info@kyracraft.in">info@kyracraft.in</a></span>
+                <span class="footer-info-divider">|</span>
+                <span>Website: <a href="index.html">www.kyracraft.in</a></span>
+            </div>
+
+            <div class="footer-copyright">
+                &copy; 2026 Kyra Craft. All Rights Reserved.<br>
+                Designed & Developed by
+    <a href="https://www.instagram.com/_nzf_hsnaa_?utm_source=qr"
+       target="_blank"
+       rel="noopener noreferrer">
+        MUHAMMED NAZEEF
+    </a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | KYRA CRAFT</title>
+    <meta name="description"
+        content="Explore detailed features, colors, specifications, and FAQs for Kyra Craft premium lifestyle everyday products. Purchase directly from our official Amazon store.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Luxury Background Canvas & Effects -->
+    <canvas id="particle-canvas"></canvas>
+    <div class="bg-glow bg-glow-gold" id="glow-1"></div>
+    <div class="bg-glow bg-glow-silver" id="glow-2"></div>
+
+    <!-- STICKY HEADER -->
+    <header class="site-header" id="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo-link">
+                <img src="logo.png" alt="Kyra Craft Logo" class="nav-logo-img">
+                <span class="nav-logo-text">KYRA CRAFT</span>
+            </a>
+            
+            <!-- Desktop Nav Menu -->
+            <ul class="nav-menu nav-menu-desktop">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#collections" class="nav-link">Collections</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button class="mobile-nav-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#collections" class="nav-link">Collections</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <main class="container">
+        <!-- PRODUCT BASE DETAIL SECTION -->
+        <section class="product-detail-container header-offset">
+            <!-- Left: Media/Gallery Column -->
+            <div class="gallery-container">
+                <div class="main-image-wrapper" id="zoom-image-wrapper">
+                    <!-- Main image or Fallback SVG will be injected here -->
+                    <img src="" alt="Product Main Image" class="main-image-view" id="main-product-image">
+                    <div class="zoom-hint" id="zoom-indicator">Hover to Zoom</div>
+                </div>
+                
+                <!-- Thumbnails Strip -->
+                <div class="thumbnail-strip" id="product-thumbnails-grid">
+                    <!-- Thumbnails injected dynamically -->
+                </div>
+            </div>
+
+            <!-- Right: Info/Buy Column -->
+            <div class="product-info-container">
+                <span class="product-tag">Lunch Box Collection</span>
+                
+                <h1 class="product-name" id="product-display-name">KYRA CRAFT Product</h1>
+                <p class="product-tagline" id="product-display-tagline">Thoughtfully designed for everyday quality.</p>
+                
+                <p class="product-desc" id="product-display-desc">
+                    Product description will load here...
+                </p>
+
+                <!-- Color Swatches Selection -->
+                <div class="variants-section">
+                    <h3 class="variants-title">Select Color Variant</h3>
+                    <div class="color-swatch-list" id="swatches-container">
+                        <!-- Swatches injected dynamically -->
+                    </div>
+                </div>
+
+                <!-- Primary Amazon CTA Button -->
+                <div class="actions-section">
+                    <a href="#" target="_blank" rel="noopener" class="btn-buy-amazon" id="amazon-buy-cta">
+                        <i class="fa-brands fa-amazon"></i>
+                        <span>Buy on Amazon</span>
+                    </a>
+                    <p class="buy-badge-text"><i class="fa-solid fa-truck-fast"></i> Ships and Sold by Amazon India</p>
+                </div>
+
+                <!-- Key Highlights (Brief Features Grid) -->
+                <div class="product-features-brief" id="brief-highlights-grid">
+                    <!-- Key features cards injected dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SPECIFICATIONS TABLE SECTION -->
+        <section class="specs-section scroll-reveal" id="specifications-table-block">
+            <h2 class="specs-title">Technical Specifications</h2>
+            <table class="specs-table">
+                <tbody id="specs-table-body">
+                    <!-- Specs rows injected dynamically -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- FAQ ACCORDION SECTION -->
+        <section class="faq-section scroll-reveal" id="faq-accordions-block">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+            <div class="faq-accordion" id="faq-accordion-container">
+                <!-- FAQ Accordion items injected dynamically -->
+            </div>
+        </section>
+
+        <!-- RELATED PRODUCTS SECTION -->
+        <section class="related-products-section scroll-reveal">
+            <h2 class="related-products-title">Complete Your Set</h2>
+            <div class="products-grid" id="related-products-grid">
+                <!-- Injected dynamically -->
+            </div>
+        </section>
+
+        <!-- CUSTOMER REVIEWSMockup (PLACEHOLDER) -->
+        <section class="reviews-section scroll-reveal" id="reviews-placeholder-block">
+            <h2 class="reviews-title">Customer Feedback</h2>
+            
+            <div class="reviews-summary-container">
+                <!-- Left: Star ratings box -->
+                <div class="rating-score-box">
+                    <span class="large-rating-num">4.7</span>
+                    <div class="score-stars-row">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span class="score-caption">Out of 5 Stars<br>(Based on 142 ratings)</span>
+                </div>
+
+                <!-- Right: Breakdown progress bars -->
+                <div class="rating-breakdown-box">
+                    <!-- 5 Star -->
+                    <div class="breakdown-row">
+                        <span class="breakdown-label">5 Star</span>
+                        <div class="breakdown-bar-wrapper">
+                            <div class="breakdown-bar-fill" style="width: 78%;"></div>
+                        </div>
+                        <span class="breakdown-percentage">78%</span>
+                    </div>
+
+                    <!-- 4 Star -->
+                    <div class="breakdown-row">
+                        <span class="breakdown-label">4 Star</span>
+                        <div class="breakdown-bar-wrapper">
+                            <div class="breakdown-bar-fill" style="width: 14%;"></div>
+                        </div>
+                        <span class="breakdown-percentage">14%</span>
+                    </div>
+
+                    <!-- 3 Star -->
+                    <div class="breakdown-row">
+                        <span class="breakdown-label">3 Star</span>
+                        <div class="breakdown-bar-wrapper">
+                            <div class="breakdown-bar-fill" style="width: 5%;"></div>
+                        </div>
+                        <span class="breakdown-percentage">5%</span>
+                    </div>
+
+                    <!-- 2 Star -->
+                    <div class="breakdown-row">
+                        <span class="breakdown-label">2 Star</span>
+                        <div class="breakdown-bar-wrapper">
+                            <div class="breakdown-bar-fill" style="width: 2%;"></div>
+                        </div>
+                        <span class="breakdown-percentage">2%</span>
+                    </div>
+
+                    <!-- 1 Star -->
+                    <div class="breakdown-row">
+                        <span class="breakdown-label">1 Star</span>
+                        <div class="breakdown-bar-wrapper">
+                            <div class="breakdown-bar-fill" style="width: 1%;"></div>
+                        </div>
+                        <span class="breakdown-percentage">1%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Testimonials Grid -->
+            <div class="reviews-list">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer-name">Anand K.</span>
+                        <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Purchase</span>
+                    </div>
+                    <div class="review-meta">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="review-date">Reviewed on July 10, 2026</span>
+                    </div>
+                    <h4 class="review-title-text">Absolutely Premium Quality!</h4>
+                    <p class="review-body-text">
+                        Very satisfied with the build quality. The inner steel feels extremely high grade and the outer plastic has a sleek matte finish that looks very high-end. Leak-proof locks work perfectly without any spillages. Highly recommend for office lunches.
+                    </p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer-name">Meera Nair</span>
+                        <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Purchase</span>
+                    </div>
+                    <div class="review-meta">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <span class="review-date">Reviewed on June 28, 2026</span>
+                    </div>
+                    <h4 class="review-title-text">Great design, easy to clean</h4>
+                    <p class="review-body-text">
+                        The colors match the photos online perfectly. I got the blue variant and it looks very elegant. It fits spoon inside which is super convenient for college. Cleans easily in the dishwasher. Wish there were matching water bottles available!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer-section">
+            <div class="footer-logo">KYRA CRAFT</div>
+            <div class="footer-tagline">Crafting Premium Everyday Essentials</div>
+            <div class="footer-divider"></div>
+
+            <div class="footer-info">
+                <span>Instagram: <a
+                        href="https://www.instagram.com/kyracraft.official?utm_source=qr"
+                        target="_blank" rel="noopener">@kyracraft.official</a></span>
+                <span class="footer-info-divider">|</span>
+                <span>Email: <a href="mailto:info@kyracraft.in">info@kyracraft.in</a></span>
+                <span class="footer-info-divider">|</span>
+                <span>Website: <a href="index.html">www.kyracraft.in</a></span>
+            </div>
+
+            <div class="footer-copyright">
+                &copy; 2026 Kyra Craft. All Rights Reserved.
+            </div>
+        </footer>
+    </main>
+
+    <!-- Load centralized products data first -->
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

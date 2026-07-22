@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | KYRA CRAFT</title>
+    <meta name="description"
+        content="Get in touch with Kyra Craft. Reach out via email, check our address in Vadakara, Kerala, or follow our official Instagram channel.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Luxury Background Canvas & Effects -->
+    <canvas id="particle-canvas"></canvas>
+    <div class="bg-glow bg-glow-gold" id="glow-1"></div>
+    <div class="bg-glow bg-glow-silver" id="glow-2"></div>
+
+    <!-- STICKY HEADER -->
+    <header class="site-header" id="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo-link">
+                <img src="logo.png" alt="Kyra Craft Logo" class="nav-logo-img">
+                <span class="nav-logo-text">KYRA CRAFT</span>
+            </a>
+            
+            <!-- Desktop Nav Menu -->
+            <ul class="nav-menu nav-menu-desktop">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#collections" class="nav-link">Collections</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button class="mobile-nav-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#collections" class="nav-link">Collections</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+    </div>
+
+    <main class="container">
+        <!-- CONTACT HERO SECTION -->
+        <section class="contact-hero-section scroll-reveal header-offset">
+            <h1 class="headline">
+                <span class="text-gold-gradient">GET IN</span><br>
+                <span class="text-silver-gradient">TOUCH WITH US.</span>
+            </h1>
+            <p class="sub-headline">
+                We would love to hear from you. Reach out for partnership inquiries, customer service, or feedback.
+            </p>
+        </section>
+
+        <!-- CONTACT CONTENT LAYOUT -->
+        <section class="contact-layout scroll-reveal">
+            <!-- Left: Info Column -->
+            <div class="contact-info-column">
+                <!-- Email -->
+                <div class="contact-card-box">
+                    <div class="contact-card-icon"><i class="fa-regular fa-envelope"></i></div>
+                    <div class="contact-card-details">
+                        <span class="contact-card-label">Email Us</span>
+                        <span class="contact-card-value"><a href="mailto:info@kyracraft.in">info@kyracraft.in</a></span>
+                    </div>
+                </div>
+
+                <!-- Website -->
+                <div class="contact-card-box">
+                    <div class="contact-card-icon"><i class="fa-solid fa-globe"></i></div>
+                    <div class="contact-card-details">
+                        <span class="contact-card-label">Official Website</span>
+                        <span class="contact-card-value"><a href="index.html">www.kyracraft.in</a></span>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="contact-card-box">
+                    <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="contact-card-details">
+                        <span class="contact-card-label">Our Office</span>
+                        <span class="contact-card-value">
+                            Kyra Craft<br>
+                            Vadakara, Kerala<br>
+                            India - 673102
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Socials Grid (Active & Placeholders) -->
+                <div class="contact-social-section">
+                    <h3 class="contact-social-title">Connect Globally</h3>
+                    
+                    <div class="social-links-grid-full">
+                        <!-- Instagram (Active) -->
+                        <a href="https://www.instagram.com/kyracraft.official?utm_source=qr" target="_blank" rel="noopener" class="social-box-link active-link">
+                            <span class="social-box-icon"><i class="fa-brands fa-instagram"></i></span>
+                            <span class="social-box-name">Instagram</span>
+                        </a>
+
+                        <!-- WhatsApp (Placeholder) -->
+                        <a href="#" class="social-box-link placeholder-link" title="Coming Soon">
+                            <span class="social-box-icon"><i class="fa-brands fa-whatsapp"></i></span>
+                            <span class="social-box-name">WhatsApp</span>
+                        </a>
+
+                        <!-- Amazon Store (Placeholder) -->
+                        <a href="#" class="social-box-link placeholder-link" title="Coming Soon">
+                            <span class="social-box-icon"><i class="fa-brands fa-amazon"></i></span>
+                            <span class="social-box-name">Amazon Store</span>
+                        </a>
+
+                        <!-- Facebook (Placeholder) -->
+                        <a href="#" class="social-box-link placeholder-link" title="Coming Soon">
+                            <span class="social-box-icon"><i class="fa-brands fa-facebook-f"></i></span>
+                            <span class="social-box-name">Facebook</span>
+                        </a>
+
+                        <!-- LinkedIn (Placeholder) -->
+                        <a href="#" class="social-box-link placeholder-link" title="Coming Soon">
+                            <span class="social-box-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+                            <span class="social-box-name">LinkedIn</span>
+                        </a>
+
+                        <!-- YouTube (Placeholder) -->
+                        <a href="#" class="social-box-link placeholder-link" title="Coming Soon">
+                            <span class="social-box-icon"><i class="fa-brands fa-youtube"></i></span>
+                            <span class="social-box-name">YouTube</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Message Form Box -->
+            <div class="message-form-box">
+                <h3 class="form-title">Send a Message</h3>
+                
+                <form id="contactForm" onsubmit="event.preventDefault(); alert('Thank you for contacting Kyra Craft. We will get back to you shortly.'); this.reset();">
+                    <div class="contact-form-group">
+                        <label for="contact-name" class="contact-form-label">Full Name</label>
+                        <input type="text" id="contact-name" class="contact-form-input" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="contact-form-group">
+                        <label for="contact-email" class="contact-form-label">Email Address</label>
+                        <input type="email" id="contact-email" class="contact-form-input" placeholder="Enter your email" required autocomplete="email">
+                    </div>
+
+                    <div class="contact-form-group">
+                        <label for="contact-subject" class="contact-form-label">Subject</label>
+                        <input type="text" id="contact-subject" class="contact-form-input" placeholder="What is this about?" required>
+                    </div>
+
+                    <div class="contact-form-group">
+                        <label for="contact-message" class="contact-form-label">Message</label>
+                        <textarea id="contact-message" class="contact-form-textarea" placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-gold" style="width: 100%; justify-content: center; cursor: pointer; border: none;">
+                        <span>Submit Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer-section">
+            <div class="footer-logo">KYRA CRAFT</div>
+            <div class="footer-tagline">Crafting Premium Everyday Essentials</div>
+            <div class="footer-divider"></div>
+
+            <div class="footer-info">
+                <span>Instagram: <a
+                        href="https://www.instagram.com/kyracraft.official?utm_source=qr"
+                        target="_blank" rel="noopener">@kyracraft.official</a></span>
+                <span class="footer-info-divider">|</span>
+                <span>Email: <a href="mailto:info@kyracraft.in">info@kyracraft.in</a></span>
+                <span class="footer-info-divider">|</span>
+                <span>Website: <a href="index.html">www.kyracraft.in</a></span>
+            </div>
+
+            <div class="footer-copyright">
+                &copy; 2026 Kyra Craft. All Rights Reserved.<br>
+                Designed & Developed by
+    <a href="https://www.instagram.com/_nzf_hsnaa_?utm_source=qr"
+       target="_blank"
+       rel="noopener noreferrer">
+        MUHAMMED NAZEEF
+    </a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
